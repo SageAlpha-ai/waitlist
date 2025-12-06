@@ -1,0 +1,20 @@
+// Prisma Schema for Sagealpha.ai Waitlist
+// Database: PostgreSQL (Azure Database for PostgreSQL in production)
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model WaitlistUser {
+  id          Int      @id @default(autoincrement())
+  name        String
+  phoneNumber String   @unique
+  createdAt   DateTime @default(now())
+
+  @@map("waitlist_users")
+}

@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Stripe-Style Design System */
+    --background: 0 0% 100%;
+    --foreground: 237 58% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 237 58% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 237 58% 15%;
+    --primary: 237 58% 15%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 5% 97%;
+    --secondary-foreground: 220 9% 34%;
+    --muted: 240 5% 97%;
+    --muted-foreground: 220 9% 34%;
+    --accent: 255 100% 68%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 237 58% 15%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border-muted;
+  }
+  body {
+    @apply bg-white text-text-primary antialiased;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* Stripe Gradient Text */
+  .gradient-text {
+    background: linear-gradient(135deg, #FF5CDB 0%, #7A5CFF 45%, #2AE8FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Stripe Gradient Background */
+  .stripe-gradient {
+    background: linear-gradient(135deg, #FF5CDB 0%, #7A5CFF 45%, #2AE8FF 100%);
+  }
+
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+}
+
+/* Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F8F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #E5E7EB;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D1D5DB;
+}
+
+/* Selection */
+::selection {
+  background: rgba(122, 92, 255, 0.15);
+}
