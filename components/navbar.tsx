@@ -12,6 +12,7 @@ const navLinks = [
   { href: '/#about', label: 'About Us' },
   { href: '/#product', label: 'Product' },
   { href: '/#pricing', label: 'Pricing' },
+  { href: '/newsletter', label: 'Newsletter' },
 ]
 
 export function Navbar() {

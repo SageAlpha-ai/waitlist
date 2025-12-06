@@ -53,25 +53,87 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right Column - Video Card with Gradient Border */}
+          {/* Right Column - AI Dashboard Card with Gradient Border */}
           <div className="relative animate-slide-in-right">
             {/* Gradient Border Container */}
             <div className="stripe-gradient rounded-3xl p-[3px] shadow-stripe-xl">
-              {/* Video Container */}
-              <div className="bg-white rounded-[22px] overflow-hidden">
-                <div className="relative aspect-[16/10] w-full">
-                  <video
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    className="w-full h-full object-cover"
-                  >
-                    <source src="/videos/hero-demo.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                  {/* Subtle overlay for better contrast */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent pointer-events-none" />
+              {/* Dashboard Card */}
+              <div className="bg-white rounded-[22px] p-6">
+                {/* Header */}
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-primary-navy">AI Dashboard</h3>
+                  <p className="text-sm text-text-secondary">Real-time analytics</p>
+                </div>
+
+                {/* Metric Cards */}
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  {/* Analytics Metric */}
+                  <div className="bg-white-lilac rounded-xl p-4 border border-border-muted">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-gradient-start to-gradient-indigo flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                        </svg>
+                      </div>
+                      <span className="text-sm font-medium text-text-secondary">Analytics</span>
+                    </div>
+                    <div className="text-2xl font-bold text-primary-navy">+127%</div>
+                    <div className="text-xs text-text-secondary">Growth</div>
+                  </div>
+
+                  {/* Security Metric */}
+                  <div className="bg-white-lilac rounded-xl p-4 border border-border-muted">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-gradient-indigo to-gradient-end flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                      </div>
+                      <span className="text-sm font-medium text-text-secondary">Security</span>
+                    </div>
+                    <div className="text-2xl font-bold text-primary-navy">100%</div>
+                    <div className="text-xs text-text-secondary">Protected</div>
+                  </div>
+                </div>
+
+                {/* Performance Metrics */}
+                <div className="bg-white-lilac rounded-xl p-4 border border-border-muted">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-sm font-medium text-primary-navy">Performance Metrics</span>
+                    <span className="text-xs text-text-secondary">Last 7 days</span>
+                  </div>
+                  <div className="space-y-3">
+                    {/* Bar 1 */}
+                    <div>
+                      <div className="flex justify-between text-xs mb-1">
+                        <span className="text-text-secondary">AI Processing</span>
+                        <span className="text-primary-navy font-medium">94%</span>
+                      </div>
+                      <div className="h-2 bg-border-muted rounded-full overflow-hidden">
+                        <div className="h-full w-[94%] bg-gradient-to-r from-gradient-start via-gradient-indigo to-gradient-end rounded-full" />
+                      </div>
+                    </div>
+                    {/* Bar 2 */}
+                    <div>
+                      <div className="flex justify-between text-xs mb-1">
+                        <span className="text-text-secondary">Data Accuracy</span>
+                        <span className="text-primary-navy font-medium">98%</span>
+                      </div>
+                      <div className="h-2 bg-border-muted rounded-full overflow-hidden">
+                        <div className="h-full w-[98%] bg-gradient-to-r from-gradient-indigo to-gradient-end rounded-full" />
+                      </div>
+                    </div>
+                    {/* Bar 3 */}
+                    <div>
+                      <div className="flex justify-between text-xs mb-1">
+                        <span className="text-text-secondary">Insight Speed</span>
+                        <span className="text-primary-navy font-medium">87%</span>
+                      </div>
+                      <div className="h-2 bg-border-muted rounded-full overflow-hidden">
+                        <div className="h-full w-[87%] bg-gradient-to-r from-gradient-start to-gradient-indigo rounded-full" />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -80,7 +142,7 @@ export function Hero() {
             <div className="absolute -top-3 -right-3 bg-white border border-border-muted px-4 py-2 rounded-full shadow-stripe-md z-10">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                <span className="text-primary-navy text-sm font-medium">Live Demo</span>
+                <span className="text-primary-navy text-sm font-medium">Live</span>
               </div>
             </div>
           </div>
