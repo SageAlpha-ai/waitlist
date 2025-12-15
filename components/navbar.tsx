@@ -79,6 +79,14 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
+            <a
+              href="https://v4-gwbyhuegh3ezgmax.centralus-01.azurewebsites.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center rounded-full bg-gradient-to-r from-[#6a8dff] via-[#8f7bff] to-[#c56bff] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:opacity-90"
+            >
+              Get Product Demo
+            </a>
             <Link href="/waitlist">
               <Button variant="default" size="default">
                 Join Waitlist
@@ -113,6 +121,15 @@ export function Navbar() {
                   {link.label}
                 </a>
               ))}
+              <a
+                href="https://v4-gwbyhuegh3ezgmax.centralus-01.azurewebsites.net/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-white font-semibold py-2.5 px-4 rounded-xl transition hover:opacity-90 bg-gradient-to-r from-[#6a8dff] via-[#8f7bff] to-[#c56bff] text-center"
+              >
+                Get Started
+              </a>
               <div className="pt-2 mt-1 border-t border-border-muted">
                 <Link href="/waitlist" onClick={() => setIsMobileMenuOpen(false)}>
                   <Button variant="default" className="w-full">
