@@ -12,7 +12,7 @@ const navLinks = [
   { href: '/#about', label: 'About Us' },
   { href: '/#product', label: 'Product' },
   { href: '/#pricing', label: 'Pricing' },
-  { href: '/newsletter', label: 'Newsletter' },
+  { href: '/newsletter', label: 'Whitepaper' },
 ]
 
 export function Navbar() {
@@ -80,7 +80,7 @@ export function Navbar() {
               </a>
             ))}
             <a
-              href="https://v4-gwbyhuegh3ezgmax.centralus-01.azurewebsites.net/"
+              href="https://blue-cliff-080a39310.4.azurestaticapps.net/login"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center rounded-full bg-gradient-to-r from-[#6a8dff] via-[#8f7bff] to-[#c56bff] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:opacity-90"
@@ -122,10 +122,10 @@ export function Navbar() {
                 </a>
               ))}
               <a
-                href="https://v4-gwbyhuegh3ezgmax.centralus-01.azurewebsites.net/"
-                target="_blank"
+                href="http://localhost:8000/login"
+                target="_self"
                 rel="noopener noreferrer"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => handleNavClick(e, 'http://localhost:8000/login')}
                 className="text-white font-semibold py-2.5 px-4 rounded-xl transition hover:opacity-90 bg-gradient-to-r from-[#6a8dff] via-[#8f7bff] to-[#c56bff] text-center"
               >
                 Get Started

@@ -1,105 +1,176 @@
-import { Mail, Bell, TrendingUp } from 'lucide-react'
-import Link from 'next/link'
+import { FileText, Download, BookOpen, TrendingUp, BarChart3, Lightbulb, Target, Zap } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
-export default function NewsletterPage() {
+export default function WhitepaperPage() {
+  const pdfUrl = 'https://drive.google.com/uc?export=download&id=1zwT3DLpSglw0OfnZfw_cx3sSLWah92ME'
+  const pdfViewUrl = 'https://drive.google.com/file/d/1zwT3DLpSglw0OfnZfw_cx3sSLWah92ME/view?usp=sharing'
+
+  const keyTopics = [
+    {
+      icon: TrendingUp,
+      title: 'AI-Powered Market Analysis',
+      description: 'Discover how advanced machine learning algorithms analyze NSE & BSE markets to provide actionable insights and predictions.',
+    },
+    {
+      icon: BarChart3,
+      title: 'Quantitative Research Methodology',
+      description: 'Learn about our data-driven approach to equity research, combining traditional analysis with cutting-edge AI technology.',
+    },
+    {
+      icon: Lightbulb,
+      title: 'Investment Strategy Framework',
+      description: 'Understand the strategic framework that guides our stock recommendations and portfolio optimization techniques.',
+    },
+    {
+      icon: Target,
+      title: 'Risk Management & Compliance',
+      description: 'Explore how we integrate risk assessment and regulatory compliance into our AI-driven research platform.',
+    },
+    {
+      icon: Zap,
+      title: 'Real-Time Market Intelligence',
+      description: 'See how real-time data processing and analysis enable faster decision-making in volatile market conditions.',
+    },
+    {
+      icon: BookOpen,
+      title: 'Case Studies & Performance Metrics',
+      description: 'Review detailed case studies showcasing the effectiveness of our AI-powered research methodology.',
+    },
+  ]
+
   return (
     <main className="min-h-screen bg-white pt-20">
-      {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* Icon */}
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white-lilac border border-border-muted mb-6">
-            <Mail className="h-8 w-8 text-primary-navy" />
-          </div>
-
-          {/* Title */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-navy mb-6">
-            SageAlpha.ai{' '}
-            <span className="gradient-text">Newsletter</span>
-          </h1>
-
-          {/* Subtitle */}
-          <p className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-8 leading-relaxed">
-            Stay ahead of the markets with curated AI-driven insights on NSE & BSE, 
-            delivered directly to your inbox.
+      {/* Top Section */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Small Title */}
+          <p className="text-sm text-text-secondary mb-6">
+            SageAlpha Whitepapers
           </p>
 
-          {/* Coming Soon Notice */}
-          <div className="bg-white-lilac border border-border-muted rounded-2xl p-6 md:p-8 max-w-xl mx-auto mb-10">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <Bell className="h-5 w-5 text-gradient-indigo" />
-              <span className="text-sm font-semibold text-primary-navy">Coming Soon</span>
-            </div>
-            <p className="text-text-secondary">
-              We&apos;ll publish our first issues soon. Join the waitlist to be notified 
-              when the newsletter goes live.
-            </p>
-          </div>
+          {/* Summary */}
+          <p className="text-lg text-text-secondary max-w-3xl mb-12 leading-relaxed">
+            A comprehensive guide to AI-powered equity research and how SageAlpha.ai is 
+            transforming the way investors analyze NSE & BSE markets through advanced 
+            machine learning and quantitative analysis.
+          </p>
 
-          {/* CTA */}
-          <Link href="/waitlist">
-            <Button variant="default" size="xl" className="group">
-              Join Waitlist
-              <TrendingUp className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </Link>
+          {/* THE AUTONOMOUS ANALYST Heading with PDF Link */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-12 pb-8 border-b border-border-muted">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-navy">
+              THE AUTONOMOUS ANALYST
+            </h1>
+            <a
+              href={pdfUrl}
+              download="SageAlpha-Whitepaper.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button 
+                variant="default" 
+                size="lg" 
+                className="group bg-gradient-to-r from-[#6a8dff] via-[#8f7bff] to-[#c56bff] hover:opacity-90 border-0 shadow-lg whitespace-nowrap"
+              >
+                <Download className="mr-2 h-4 w-4 group-hover:translate-y-0.5 transition-transform" />
+                Download PDF
+              </Button>
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* Features Preview */}
-      <section className="py-16 md:py-24 bg-white-lilac">
+      {/* Overview Section */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white-lilac rounded-2xl p-8 md:p-12 border border-border-muted">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary-navy mb-6">
+              About This WhitePaper
+            </h2>
+            <div className="space-y-4 text-text-secondary leading-relaxed">
+              <p>
+                This whitepaper provides an in-depth exploration of SageAlpha.ai&apos;s 
+                revolutionary approach to equity research. We delve into the technical 
+                foundations, methodologies, and real-world applications of our AI-powered 
+                platform designed specifically for NSE and BSE market analysis.
+              </p>
+              <p>
+                Whether you&apos;re an institutional investor, financial analyst, fund manager, 
+                or technology enthusiast, this document offers valuable insights into how 
+                artificial intelligence is reshaping the landscape of financial market 
+                research and investment decision-making.
+              </p>
+              <p>
+                Our comprehensive analysis covers everything from data collection and 
+                processing pipelines to advanced machine learning models, risk management 
+                frameworks, and performance validation metrics.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Topics Section */}
+      <section className="py-12 md:py-16 bg-white-lilac">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-primary-navy text-center mb-12">
-            What to Expect
-          </h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-navy mb-4">
+              Key Topics Covered
+            </h2>
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+              Explore the comprehensive content included in our whitepaper
+            </p>
+          </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {/* Feature 1 */}
-            <div className="bg-white rounded-2xl p-6 border border-border-muted shadow-stripe">
-              <div className="w-10 h-10 rounded-xl bg-primary-navy flex items-center justify-center mb-4">
-                <TrendingUp className="h-5 w-5 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold text-primary-navy mb-2">
-                Market Analysis
-              </h3>
-              <p className="text-text-secondary text-sm leading-relaxed">
-                Weekly deep-dives into NSE & BSE trends, powered by AI-driven insights 
-                and expert analysis.
-              </p>
-            </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {keyTopics.map((topic, index) => (
+              <Card key={index} className="border-border-muted hover:border-[#D1D5DB] transition-colors duration-150 shadow-stripe">
+                <CardHeader>
+                  <div className="w-12 h-12 rounded-xl bg-primary-navy flex items-center justify-center mb-4">
+                    <topic.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <CardTitle className="text-xl font-semibold text-primary-navy">
+                    {topic.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-text-secondary leading-relaxed">
+                    {topic.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            {/* Feature 2 */}
-            <div className="bg-white rounded-2xl p-6 border border-border-muted shadow-stripe">
-              <div className="w-10 h-10 rounded-xl bg-primary-navy flex items-center justify-center mb-4">
-                <svg className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-primary-navy mb-2">
-                Stock Picks
-              </h3>
-              <p className="text-text-secondary text-sm leading-relaxed">
-                Curated stock recommendations based on quantitative analysis and 
-                machine learning models.
-              </p>
-            </div>
-
-            {/* Feature 3 */}
-            <div className="bg-white rounded-2xl p-6 border border-border-muted shadow-stripe">
-              <div className="w-10 h-10 rounded-xl bg-primary-navy flex items-center justify-center mb-4">
-                <svg className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-primary-navy mb-2">
-                Quick Insights
-              </h3>
-              <p className="text-text-secondary text-sm leading-relaxed">
-                Bite-sized daily updates on market movements, sector rotations, 
-                and breaking news.
-              </p>
-            </div>
+      {/* CTA Section */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="bg-gradient-to-br from-[#6a8dff] via-[#8f7bff] to-[#c56bff] rounded-2xl p-8 md:p-12 text-white">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              Ready to Dive Deeper?
+            </h2>
+            <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
+              Download the complete whitepaper to explore our AI-powered equity research 
+              methodology in detail and discover how SageAlpha.ai can transform your 
+              investment research process.
+            </p>
+            <a
+              href={pdfUrl}
+              download="SageAlpha-Whitepaper.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button 
+                variant="default" 
+                size="xl" 
+                className="bg-white text-primary-navy hover:bg-white-lilac border-0 shadow-lg group"
+              >
+                <Download className="mr-2 h-5 w-5 group-hover:translate-y-0.5 transition-transform" />
+                Download WhitePaper Now
+              </Button>
+            </a>
           </div>
         </div>
       </section>
