@@ -3,8 +3,8 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
 export default function WhitepaperPage() {
-  const pdfUrl = 'https://drive.google.com/uc?export=download&id=1zwT3DLpSglw0OfnZfw_cx3sSLWah92ME'
-  const pdfViewUrl = 'https://drive.google.com/file/d/1zwT3DLpSglw0OfnZfw_cx3sSLWah92ME/view?usp=sharing'
+  const pdfUrl = 'https://drive.google.com/file/d/1TG34Za4vkYawq_IfHpIiz8g0fwCNj6Xi/view?usp=sharing'
+  const pdfViewUrl = 'https://drive.google.com/file/d/1TG34Za4vkYawq_IfHpIiz8g0fwCNj6Xi/view?usp=sharing'
 
   const keyTopics = [
     {
